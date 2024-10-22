@@ -1,0 +1,15 @@
+% !TEX root = ../main.tex
+
+%----------------------------------------------------------------------------------------
+% INHALTSVERZEICHNIS
+%----------------------------------------------------------------------------------------
+\section{Inhaltsverzeichnis}                                    % Inhaltsverzeichnis mit römischer Nummerierung
+\vspace{-2.1cm}
+\renewcommand\contentsname{}                                    % Leerer Name für das Inhaltsverzeichnis
+\begingroup
+\let\clearpage\relax                                            % Verhindert den Seitenumbruch für das Inhaltsverzeichnis
+{
+  \hypersetup{linkcolor=black}
+  \tableofcontents
+}
+\endgroup

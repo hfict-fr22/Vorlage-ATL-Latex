@@ -1,45 +1,52 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% This is a LaTeX template for Bachelor or Master theses at ZHAW, in accordance with the 
-% guidelines provided here:
-% https://www.zhaw.ch/en/lsfm/study/studiweb/master-ls/masters-thesis/
+% Dieses LaTeX-Vorlage dient für die Verwendung der Arbeiten (ATL, Diplom) gemäss
+% den hf-ict Richtlinien (Version 3.0) zum Zeitpunkt der Erstellung.
 %
-%
-% This template is based on previous works by:
+% Diese Vorlage basiert auf früheren Arbeiten von:
 % Steve Gunn (http://users.ecs.soton.ac.uk/srg/softwaretools/document/templates/)
 % Sunil Patel (http://www.sunilpatel.co.uk/thesis-template/)
 % Matteo Delucchi (https://github.com/matteodelucchi/ZHAW_thesis-template)
 %
-% University specific changes were made by:
-% Matteo Delucchi
-% Norman Juchler
+% hf-ict spezifische Änderungen wurden vorgenommen von:
+% Stefan Baumgartner
 % 
-% Template license:
+% Vorlage Lizenz:
 % CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %----------------------------------------------------------------------------------------
-% DOCUMENT SPECIFICATION
+% DOKUMENT SPEZIFIKATIONEN
 %----------------------------------------------------------------------------------------
 \documentclass[
-    11pt,                      % Default font size
-    %oneside,                  % One-side binding. Default: Two-side binding / alternating margins
-    english,                   % Language. Use ngerman for German (Neue Rechtschreibung)
-    singlespacing,             % Spacing option: singlespacing, onehalfspacing or doublespacing
-    %nolistspacing,            % Set spacing in lists to single
-    %draft,                    % Enable draft mode: no pictures, no links, overfull hboxes indicated
-    liststotoc,               % Include list of figures/tables/etc in the table of contents
-    %toctotoc,                 % Include the main table of contents to the table of contents
-    parskip,                  % Add vertical space between paragraphs
-    %nohyperref,               % Disable links in the entire document
-    % helveticafont,             % Uncomment to use Helvetica font
-    headsepline,               % Show a horizontal line under the header
-    %chapterinoneline,         % Place the chapter title and chapter number on one line
-    consistentlayout,          % Have the same layout for special chapters: 
-                               % declaration, abstract and acknowledgements
-]{MastersDoctoralThesis}
+    12pt,                       % Standard Schriftgrösse
+    oneside,                    % Standard: Einseitiger Einband.
+    ngerman,                    % Sprache. Verwende ngerman für deutsch (Neue Rechtschreibung). Verwende english für Englisch.
+    %singlespacing,             % Abstandsoption: singlespacing, onehalfspacing or doublespacing (einfacher Abstand, halber Abstand oder doppelter Abstand)
+    %nolistspacing,             % Abstand in Listen auf einfach setzen
+    %draft,                     % Aktivieren des Entwurf-Modus: keine Bilder, keine Links und überfüllte "H-Boxen" werden angezeigt
+    liststotoc,                 % Liste der Abbildungen/Tabellen/etc. in das Inhaltsverzeichnis einfügen
+    %toctotoc,                  % Das Hauptinhaltsverzeichnis in das Inhaltsverzeichnis aufnehmen
+    parskip,                    % Vertikalen Abstand zwischen Absätzen einfügen
+    %nohyperref,                % Links im gesamten Dokument deaktivieren
+    headsepline,                % Eine horizontale Linie unter der Überschrift anzeigen
+    %chapterinoneline,          % Kapitelüberschrift und Kapitelnummer in eine Zeile stellen
+    consistentlayout,           % Gleiches Layout für spezielle Kapitel
+                                % Erklärung, Zusammenfassung und Danksagung
+]{Diplomarbeit}
 
-% Uncomment the following lines to only include a subset of chapters.
-% This is useful for long documents, as typesetting takes a bit of time
+% Formatierungsinformationen
+
+\usepackage{titlesec}
+\usepackage[ngerman]{babel}
+\usepackage{arydshln}
+\usepackage{multicol}
+\usepackage{pdflscape}
+\titleformat*{\section}{\Huge\bfseries}
+
+
+
+% Unkommentieren Sie die folgenden Zeilen, um nur eine Teilmenge von Kapiteln einzuschließen
+% Dies ist nützlich für lange Dokumente, da der Satz etwas Zeit in Anspruch nimmt
 %\includeonly{
 %    Front/titlepage,
 %    Front/imprint,
@@ -49,176 +56,183 @@
 %    %Front/symbols,
 %    Chapters/Chapter1,
 %    %Chapters/Chapter2
-%    }
+%}
 
 
 %----------------------------------------------------------------------------------------
-% PREAMBLE: PACKAGES AND CONFIGURATIONS
+% PRÄAMBEL: PAKETE UND KONFIGURATIONEN
 %----------------------------------------------------------------------------------------
 \input{preamble}
+\renewcommand{\figurename}{Abbildung}
+\renewcommand{\tablename}{Tabelle}
+\renewcommand{\lstlistingname}{Code} 
+\renewcommand{\lstlistlistingname}{}
 
 
 %----------------------------------------------------------------------------------------
-% THESIS INFORMATION: MODIFY THIS SECTION!
+% DIPLOMARBEIT INFORMATION: DIESEN ABSCHNITT ÄNDERN!
 %----------------------------------------------------------------------------------------
 
-% The information below is used in the following parts:
-% - Title page
-% - Imprint
-% - Abstract / Zusammenfassung
-% - Meta information of PDF
+% Die folgenden Informationen werden in den folgenden Teilen verwendet:
+% - Titelblatt
+% - Impressum
+% - Kurzfassung / Zusammenfassung
+% - Meta-Informationen des PDF
 
-\thesistitle{Project Title}             % Thesis title,              command: \ttitle
-\thesistype{Track Module 1}             % Type of thesis (e.g. Master Thesis) \ttype
-\thesisdate{\today}                     % Date of submission                  \tdate
-\keywords{gravity, physics, disruptive science}
-                                        % Keywords for the thesis,            \keywordnames
-\author{Maxine Muster}                  % Your name,                          \authorname
-\degree{Master of Science ZFH}          % Degree name,                        \degreename
-\studyprogram{Applied Computational Life Sciences, M.Sc.} 
-                                        % Study program                       \studyprog
-\studyprogramlink{https://www.zhaw.ch/en/lsfm/study/master/applied-computational-life-sciences/}
-                                        % Link to study program               \studyproglink
-
-\supervisorA{Dr. Albert Einstein}       % Name of supervisor 1,               \supnameA
-\supervisorAmail{e=mc2@zhaw.ch}         % Email address of supervisor 1,      \supmailA
-\supervisorAweb{https://en.wikipedia.org/wiki/Albert\_Einstein}  %            \supwebA
-\supervisorAinfo{                       % Formatted info about supervisor 1:  \supinfoA
+\thesistitle{Projekt~Titel}                                 % Titel Diplomarbeit,                   Befehl: \ttitle
+\thesistype{FACH - ATL}                                            % Art der Arbeit (z. B. Diplomarbeit)           \ttype
+\thesisdate{2024-10-22}                                         % Datum der Abgabe                              \tdate
+\thesislocation{Pratteln}                                   % Ort der Erstellung                            \tloc
+\keywords{Beispiel1, Beispiel2, Beispiel3}             % Schlüsselwörter für die Arbeit                \keywordnames                          
+\author{Max Mustermann}                                         % Authorenname (Ihr Name)                       \authorname
+\authorclass{HE22}                                          % Klasse des Autors                             \authorcls
+\degree{Dipl. Techniker/in HF Informatik}                   % Name des Studiengangs                         \degreename
+\studyprogram{}                                             % Studiengang                                   \studyprog                                      
+\studyprogramlink{}
+                                                            % Link zum Studiengang                          \studyproglink
+\supervisorA{Name Fachexperte}                                    % Name des Betreuers 1                          \supnameA
+\supervisorAmail{}                                          % E-Mail Adresse des Betreuers 1                \supmailA
+\supervisorAweb{}
+                                                            %                                               \supwebA
+\supervisorAUni{}                                           % Schule / Universistät des Betreuers 1         \supuniA
+\supervisorAinfo{                                           % Formatierte Informationen über Betreuer 1     \supinfoA
     \supnameA\\
-    Zurich University of Applied Sciences\\
+    \supuniA\\
     Email: \href{mailto:\supmailA}{\supmailA}\\
     Web: \href{\supwebA}{Link}
 }
 
-% Keep empty if there is no supervisor 2: \supervisorB{}
-\supervisorB{Isaac Newton}              % Name of supervisor 2,               \supnameB
-\supervisorBmail{f=am@newton.com}       % Email address of supervisor 2,      \supmailB
-\supervisorBweb{https://en.wikipedia.org/wiki/John\_Locke}                  % \supwebB
-\supervisorBinfo{                       % Formatted info about supervisor 2:  \supinfoB
+% Leer lassen, falls es keinen zweiten Betreuer gibt                                                        \supervisorB{}
+\supervisorB{Name Experte}                                       % Name des Betreuers 2                          \supnameB
+\supervisorBmail{}                           % E-Mail Adresse des Betreuers 2                \supmailB
+\supervisorBweb{}          
+                                                            %                                               \supwebB
+\supervisorBUni{}                                           % Schule / Universistät des Betreuers 1         \supuniB
+\supervisorBinfo{                                           % Formatierte Informationen über Betreuer 2     \supinfoB
     \supnameB\\
-    University of Cambridge\\
+    \supuniB\\
     Email: \href{mailto:\supmailB}{\supmailB}\\
     Web: \href{\supwebB}{Link}
 }
 
-\university{Zurich University of Applied Sciences}
-                                        % University name                     \univname
-\universitygerman{Zürcher Hochschule für Angewandte Wissenschaften}
-                                        % University, in German               \univnameger
-\unversityabbr{ZHAW}                    % University abbreviation             \univabbr
-
-\department{Life Sciences and Facility Management} 
-                                        % Department,                         \deptname
-\institute{Institute of Computational Life Sciences} 
-                                        % Institute,                          \instname
-\group{Center of Computational Health} 
-                                        % Research group                      \groupname
+\university{Higher Technical School for Information and Communication Technology}          
+                                                            % Schulname                                    \univname                                      
+\universitygerman{Höhere Fachschule für Informations- und Kommunikationstechnologie}
+                                                            % Schulname in Deutsch                         \univnameger
+\department{}                                               % Abteilung, nicht notwendig                   \deptname                                  
+\institute{}                                                % Institut, nicht notwendig                    \instname
+\group{}                                                    % Forschungsgruppe, nicht notwendig            \groupname
 
 % Links
-\universitylink      {https://www.zhaw.ch/en/university/}                   % \univlink
-\universitylinkgerman{https://www.zhaw.ch/de/university/}                   % \univlinkger
-\departmentlink      {https://www.zhaw.ch/de/lsfm/}                         % \deptlink
-\institutelink       {https://www.zhaw.ch/en/lsfm/institutes-centres/icls/} % \instlink
-\grouplink           {https://www.zhaw.ch/en/lsfm/institutes-centres/icls/computational-health/} % \grplink
+\universitylink      {https://www.hf-ict.ch/}               %                                               \univlink
+\universitylinkgerman{https://www.hf-ict.ch/}               %                                               \univlinkger
+\departmentlink      {}                                     %                                               \deptlink
+\institutelink       {}                                     %                                               \instlink
+\grouplink           {}                                     %                                               \grplink
 
 
 
 \AtBeginDocument{
-\hypersetup{pdftitle=\ttitle} % Set the PDF's title to your title
-\hypersetup{pdfauthor=\authorname} % Set the PDF's author to your name
-\hypersetup{pdfkeywords=\keywordnames} % Set the PDF's keywords to your keywords
+\hypersetup{pdftitle=\ttitle}                               % Setzt den Titel der PDF-Datei auf Ihren Titel
+\hypersetup{pdfauthor=\authorname}                          % Setzt den Autor der PDF-Datei auf den Angebeben (Ihren) Namen
+\hypersetup{pdfkeywords=\keywordnames}                      % Setzt die Schlüsselwörter der PDF-Datei auf Ihre Schlüsselwörter
 }
 
 \begin{document}
-\frontmatter                  % Roman page numbering for the pre-content pages
-\pagestyle{plain}             % Default to the plain heading style until the thesis style 
-                              % is called for the body content
+\frontmatter                                                % Römische Seitennummerierung für die Seiten vor dem Inhalt
+\pagestyle{plain}                                           % Standardmäßig wird der einfache Überschriftsstil verwendet, bis der Stil Arbeit 
+                                                            % für den Hauptinhalt aufgerufen wird
+
+
+
+\newenvironment{ItemZiele}
+  {\begin{list}
+        \setlength{\labelsep}{0em}
+        \setlength{\itemsep}{2pt}
+  }
+{\end{list}}
 
 
 %----------------------------------------------------------------------------------------
-% TITLE PAGE AND IMPRINT
+% TITELSEITE UND IMPRESSUM
 %----------------------------------------------------------------------------------------
-\include{Front/titlepage}
-\let\cleardoublepage\clearpage
-\include{Front/imprint}
-
-
-%----------------------------------------------------------------------------------------
-% DECLARATION
-%----------------------------------------------------------------------------------------
-% Comment out this section if the declaration of originality from ZHAW is used.
-\include{Front/declaration}
-\cleardoublepage
+\include{Vorderteil/titelseite}
+% Impressum der Arbeit, für hf-ict Arbeiten nicht notwendig
+%\include{Vorderteil/impressum}
 
 
 %----------------------------------------------------------------------------------------
 % ABSTRACT
 %----------------------------------------------------------------------------------------
-\include{Front/abstract}
+% Römische Nummerierung für Abstract
+\renewcommand{\thesection}{\Roman{section}}
+\pagestyle{Diplomarbeit}
+\include{Vorderteil/abstract}
+
+%----------------------------------------------------------------------------------------
+% INHALTSVERZEICHNIS/ABBILDUNGEN/TABELLENSEITEN
+%----------------------------------------------------------------------------------------
+%  Auskommentieren, wenn eine der folgenden Seiten nicht benötigt wird:
+\include{Vorderteil/inhaltsverzeichnis}                         % Hauptinhaltsverzeichnis hinzufügen
+%\listoffigures                                             % Liste der Abbildungen hinzufügen
+%\listoftables                                              % Liste der Tabellen hinzufügen     
+%\lstlistoflistings                                          % Liste der Codeblöcke      
 
 
 %----------------------------------------------------------------------------------------
-% ACKNOWLEDGEMENTS
+% EHRENWÖRTLICHE ERKLÄRUNG
 %----------------------------------------------------------------------------------------
-\include{Front/acknowledgements}
-
-
-%----------------------------------------------------------------------------------------
-% LIST OF CONTENTS/FIGURES/TABLES PAGES
-%----------------------------------------------------------------------------------------
-% Comment out if any of the following is not needed:
-\tableofcontents  % Add main table of contents
-%\listoffigures    % Add list of figures
-%\listoftables     % Add list of tables
+\include{Vorderteil/erklaerungATL}
 
 
 %----------------------------------------------------------------------------------------
-% ABBREVIATIONS / SYMBOLS
+% VORWORT
 %----------------------------------------------------------------------------------------
-\include{Front/symbols}
-
-
-%----------------------------------------------------------------------------------------
-% DEDICATION
-%----------------------------------------------------------------------------------------
-\dedicatory{For/Dedicated to/To my\ldots} 
+%\include{Vorderteil/vorwort}
 
 
 %----------------------------------------------------------------------------------------
-% THESIS CONTENT - CHAPTERS
+% GLOSSAR
 %----------------------------------------------------------------------------------------
-\mainmatter % Begin numeric (1,2,3...) page numbering
-\pagestyle{thesis} % Return the page headers back to the "thesis" style
-
-
-% Include the chapters of the thesis as separate files from the Chapters folder
-% Uncomment the lines as you write the chapters
-
-\include{Chapters/Chapter1}
-\include{Chapters/Chapter2} 
-%\include{Chapters/Chapter3}
-%\include{Chapters/Chapter4} 
-%\include{Chapters/Chapter5} 
+\include{Vorderteil/glossar}
 
 
 %----------------------------------------------------------------------------------------
-% THESIS CONTENT - APPENDICES
+%  INHALT DER DIPLOMARBEIT - KAPITEL
 %----------------------------------------------------------------------------------------
-\appendix % Cue to tell LaTeX that the following "chapters" are Appendices
+\mainmatter
+\renewcommand{\thesection}{\arabic{section}{}}              % Beginn der numerischen (1,2,3...) Seitennummerierung
+\setcounter{section}{0}                                     % Zurücksetzen des Counters für die Zählung
+\pagestyle{Diplomarbeit}                                    % Rückführung der Seitenköpfe auf den "Diplomarbeit"-Stil
 
-% Include the appendices of the thesis as separate files from the Appendices folder
-% Uncomment the lines as you write the Appendices
-\include{Appendices/AppendixA}
-% from https://www.zhaw.ch/en/lsfm/study/studiweb/master-ls/masters-thesis/
-%\include{Appendices/AppendixB}
-%\include{Appendices/AppendixC}
-\include{Appendices/DeclarationOfOriginalityZHAW} 
+\include{Hauptteil/Kapitel1}
+\include{Hauptteil/Kapitel2}
+%\include{Hauptteil/Kapitel3}
+%\include{Hauptteil/Kapitel4}
+%\include{Hauptteil/Kapitel5}
+
+% Fügen Sie die Kapitel der Dissertation als separate Dateien in den Ordner Kapitel ein.
+% Heben Sie die Kommentare in den Zeilen auf, während Sie die Kapitel schreiben
 
 
 %----------------------------------------------------------------------------------------
-% BIBLIOGRAPHY
+% INHALT DER DIPLOMARBEIT - ANHÄNGE
 %----------------------------------------------------------------------------------------
-\printbibliography[heading=bibintoc]
+\pagestyle{Diplomarbeit}
+%\appendix                                                  % Hinweis an LaTeX, dass es sich bei den folgenden "Kapiteln" um Anhänge handelt
+\renewcommand{\thesection}{\Alph{section}}                  % Alpha Nummerierung für Anhänge
+\setcounter{section}{0}                                     % Zurücksetzen des Counters für die Zählung
+
+\include{Anhang/anhangA}
+\include{Anhang/anhangB}
+\include{Anhang/anhangC}
+\include{Anhang/anhangD}
+\include{Anhang/anhangE}
+
+%----------------------------------------------------------------------------------------
+% LITERATURVERZEICHNIS
+%----------------------------------------------------------------------------------------
+
 
 %----------------------------------------------------------------------------------------
 

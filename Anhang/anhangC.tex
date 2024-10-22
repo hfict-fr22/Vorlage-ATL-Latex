@@ -1,0 +1,15 @@
+% !TEX root = ../main.tex
+
+%----------------------------------------------------------------------------------------
+% ANHANG C - Tabellenverzeichnis
+%----------------------------------------------------------------------------------------
+\renewcommand\listtablename{}                           % Namensänderung für das Abbildungsverzeichnis
+\section{Tabellenverzeichnis} 
+\vspace{-2.1cm}
+\begingroup
+\let\clearpage\relax                                    % Verhindert den Seitenumbruch für das Tabellenverzeichnis
+{
+    \hypersetup{linkcolor=black}
+    \listoftables                                       % Liste der Tabellen hinzufügen  
+}
+\endgroup
