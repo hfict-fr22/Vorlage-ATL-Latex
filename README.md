@@ -1,13 +1,13 @@
 <!-- badges: start -->
-![github-release-image](https://img.shields.io/github/v/release/matteodelucchi/ZHAW_thesis-template)
-![github-languages-image](https://img.shields.io/github/languages/top/matteodelucchi/ZHAW_thesis-template)
-![github-contributors-image](https://img.shields.io/github/contributors/matteodelucchi/ZHAW_thesis-template)
-![github-issues-image](https://img.shields.io/github/issues/matteodelucchi/ZHAW_thesis-template)
-![github-issues-closed-image](https://img.shields.io/github/issues-closed-raw/matteodelucchi/ZHAW_thesis-template)
+![github-release-image](https://img.shields.io/github/v/release/hfict-fr22/Vorlage-ATL-Latex)
+![github-languages-image](https://img.shields.io/github/languages/top/hfict-fr22/Vorlage-ATL-Latex)
+![github-contributors-image](https://img.shields.io/github/contributors/hfict-fr22/Vorlage-ATL-Latex)
+![github-issues-image](https://img.shields.io/github/issues/hfict-fr22/Vorlage-ATL-Latex)
+![github-issues-closed-image](https://img.shields.io/github/issues-closed-raw/hfict-fr22/Vorlage-ATL-Latex)
 
-![github-forks-image](https://img.shields.io/github/forks/matteodelucchi/ZHAW_thesis-template?style=social)
-![github-stars-image](https://img.shields.io/github/stars/matteodelucchi/ZHAW_thesis-template?style=social)
-![github-watchers-image](https://img.shields.io/github/watchers/matteodelucchi/ZHAW_thesis-template?style=social)
+![github-forks-image](https://img.shields.io/github/forks/hfict-fr22/Vorlage-ATL-Latex?style=social)
+![github-stars-image](https://img.shields.io/github/stars/hfict-fr22/Vorlage-ATL-Latex?style=social)
+![github-watchers-image](https://img.shields.io/github/watchers/hfict-fr22/Vorlage-ATL-Latex?style=social)
 [![License: CC BY-NC-SA 3.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%203.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/3.0/)  
 <!-- badges: end -->
 
