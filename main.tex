@@ -68,81 +68,89 @@
 \renewcommand{\lstlistingname}{Code} 
 \renewcommand{\lstlistlistingname}{}
 
+
 %----------------------------------------------------------------------------------------
-% THESIS INFORMATION: MODIFY THIS SECTION!
+% DIPLOMARBEIT INFORMATION: DIESEN ABSCHNITT ÄNDERN!
 %----------------------------------------------------------------------------------------
 
-% The information below is used in the following parts:
-% - Title page
-% - Imprint
-% - Abstract / Zusammenfassung
-% - Meta information of PDF
+% Die folgenden Informationen werden in den folgenden Teilen verwendet:
+% - Titelblatt
+% - Impressum
+% - Kurzfassung / Zusammenfassung
+% - Meta-Informationen des PDF
 
-\thesistitle{Project Title}             % Thesis title,              command: \ttitle
-\thesistype{Track Module 1}             % Type of thesis (e.g. Master Thesis) \ttype
-\thesisdate{\today}                     % Date of submission                  \tdate
-\keywords{gravity, physics, disruptive science}
-                                        % Keywords for the thesis,            \keywordnames
-\author{Maxine Muster}                  % Your name,                          \authorname
-\degree{Master of Science ZFH}          % Degree name,                        \degreename
-\studyprogram{Applied Computational Life Sciences, M.Sc.} 
-                                        % Study program                       \studyprog
-\studyprogramlink{https://www.zhaw.ch/en/lsfm/study/master/applied-computational-life-sciences/}
-                                        % Link to study program               \studyproglink
-
-\supervisorA{Dr. Albert Einstein}       % Name of supervisor 1,               \supnameA
-\supervisorAmail{e=mc2@zhaw.ch}         % Email address of supervisor 1,      \supmailA
-\supervisorAweb{https://en.wikipedia.org/wiki/Albert\_Einstein}  %            \supwebA
-\supervisorAinfo{                       % Formatted info about supervisor 1:  \supinfoA
+\thesistitle{Pumpensumpf~Überwachung~-~Abschluss}                                 % Titel Diplomarbeit,                   Befehl: \ttitle
+\thesistype{IoT - ATL}                                            % Art der Arbeit (z. B. Diplomarbeit)           \ttype
+\thesisdate{2024-10-17}                                         % Datum der Abgabe                              \tdate
+\thesislocation{Rheinfelden}                                   % Ort der Erstellung                            \tloc
+\keywords{iot, homelab, automation, esp32}             % Schlüsselwörter für die Arbeit                \keywordnames                          
+\author{Stefan Baumgartner}                                         % Authorenname (Ihr Name)                       \authorname
+\authorclass{HE22}                                          % Klasse des Autors                             \authorcls
+\degree{Dipl. Techniker/in HF Informatik}                   % Name des Studiengangs                         \degreename
+\studyprogram{}                                             % Studiengang                                   \studyprog                                      
+\studyprogramlink{}
+                                                            % Link zum Studiengang                          \studyproglink
+\supervisorA{Severin Holm}                                    % Name des Betreuers 1                          \supnameA
+\supervisorAmail{}                                          % E-Mail Adresse des Betreuers 1                \supmailA
+\supervisorAweb{}
+                                                            %                                               \supwebA
+\supervisorAUni{}                                           % Schule / Universistät des Betreuers 1         \supuniA
+\supervisorAinfo{                                           % Formatierte Informationen über Betreuer 1     \supinfoA
     \supnameA\\
-    Zurich University of Applied Sciences\\
+    \supuniA\\
     Email: \href{mailto:\supmailA}{\supmailA}\\
     Web: \href{\supwebA}{Link}
 }
 
-% Keep empty if there is no supervisor 2: \supervisorB{}
-\supervisorB{Isaac Newton}              % Name of supervisor 2,               \supnameB
-\supervisorBmail{f=am@newton.com}       % Email address of supervisor 2,      \supmailB
-\supervisorBweb{https://en.wikipedia.org/wiki/John\_Locke}                  % \supwebB
-\supervisorBinfo{                       % Formatted info about supervisor 2:  \supinfoB
+% Leer lassen, falls es keinen zweiten Betreuer gibt                                                        \supervisorB{}
+\supervisorB{n.A.}                                       % Name des Betreuers 2                          \supnameB
+\supervisorBmail{}                           % E-Mail Adresse des Betreuers 2                \supmailB
+\supervisorBweb{}          
+                                                            %                                               \supwebB
+\supervisorBUni{}                                           % Schule / Universistät des Betreuers 1         \supuniB
+\supervisorBinfo{                                           % Formatierte Informationen über Betreuer 2     \supinfoB
     \supnameB\\
-    University of Cambridge\\
+    \supuniB\\
     Email: \href{mailto:\supmailB}{\supmailB}\\
     Web: \href{\supwebB}{Link}
 }
 
-\university{Zurich University of Applied Sciences}
-                                        % University name                     \univname
-\universitygerman{Zürcher Hochschule für Angewandte Wissenschaften}
-                                        % University, in German               \univnameger
-\unversityabbr{ZHAW}                    % University abbreviation             \univabbr
-
-\department{Life Sciences and Facility Management} 
-                                        % Department,                         \deptname
-\institute{Institute of Computational Life Sciences} 
-                                        % Institute,                          \instname
-\group{Center of Computational Health} 
-                                        % Research group                      \groupname
+\university{Higher Technical School for Information and Communication Technology}          
+                                                            % Schulname                                    \univname                                      
+\universitygerman{Höhere Fachschule für Informations- und Kommunikationstechnologie}
+                                                            % Schulname in Deutsch                         \univnameger
+\department{}                                               % Abteilung, nicht notwendig                   \deptname                                  
+\institute{}                                                % Institut, nicht notwendig                    \instname
+\group{}                                                    % Forschungsgruppe, nicht notwendig            \groupname
 
 % Links
-\universitylink      {https://www.zhaw.ch/en/university/}                   % \univlink
-\universitylinkgerman{https://www.zhaw.ch/de/university/}                   % \univlinkger
-\departmentlink      {https://www.zhaw.ch/de/lsfm/}                         % \deptlink
-\institutelink       {https://www.zhaw.ch/en/lsfm/institutes-centres/icls/} % \instlink
-\grouplink           {https://www.zhaw.ch/en/lsfm/institutes-centres/icls/computational-health/} % \grplink
+\universitylink      {https://www.hf-ict.ch/}               %                                               \univlink
+\universitylinkgerman{https://www.hf-ict.ch/}               %                                               \univlinkger
+\departmentlink      {}                                     %                                               \deptlink
+\institutelink       {}                                     %                                               \instlink
+\grouplink           {}                                     %                                               \grplink
 
 
 
 \AtBeginDocument{
-\hypersetup{pdftitle=\ttitle} % Set the PDF's title to your title
-\hypersetup{pdfauthor=\authorname} % Set the PDF's author to your name
-\hypersetup{pdfkeywords=\keywordnames} % Set the PDF's keywords to your keywords
+\hypersetup{pdftitle=\ttitle}                               % Setzt den Titel der PDF-Datei auf Ihren Titel
+\hypersetup{pdfauthor=\authorname}                          % Setzt den Autor der PDF-Datei auf den Angebeben (Ihren) Namen
+\hypersetup{pdfkeywords=\keywordnames}                      % Setzt die Schlüsselwörter der PDF-Datei auf Ihre Schlüsselwörter
 }
 
 \begin{document}
-\frontmatter                  % Roman page numbering for the pre-content pages
-\pagestyle{plain}             % Default to the plain heading style until the thesis style 
-                              % is called for the body content
+\frontmatter                                                % Römische Seitennummerierung für die Seiten vor dem Inhalt
+\pagestyle{plain}                                           % Standardmäßig wird der einfache Überschriftsstil verwendet, bis der Stil Arbeit 
+                                                            % für den Hauptinhalt aufgerufen wird
+
+
+
+\newenvironment{ItemZiele}
+  {\begin{list}
+        \setlength{\labelsep}{0em}
+        \setlength{\itemsep}{2pt}
+  }
+{\end{list}}
 
 
 %----------------------------------------------------------------------------------------
