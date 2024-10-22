@@ -1,45 +1,52 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% This is a LaTeX template for Bachelor or Master theses at ZHAW, in accordance with the 
-% guidelines provided here:
-% https://www.zhaw.ch/en/lsfm/study/studiweb/master-ls/masters-thesis/
+% Dieses LaTeX-Vorlage dient für die Verwendung der Arbeiten (ATL, Diplom) gemäss
+% den hf-ict Richtlinien (Version 3.0) zum Zeitpunkt der Erstellung.
 %
-%
-% This template is based on previous works by:
+% Diese Vorlage basiert auf früheren Arbeiten von:
 % Steve Gunn (http://users.ecs.soton.ac.uk/srg/softwaretools/document/templates/)
 % Sunil Patel (http://www.sunilpatel.co.uk/thesis-template/)
 % Matteo Delucchi (https://github.com/matteodelucchi/ZHAW_thesis-template)
 %
-% University specific changes were made by:
-% Matteo Delucchi
-% Norman Juchler
+% hf-ict spezifische Änderungen wurden vorgenommen von:
+% Stefan Baumgartner
 % 
-% Template license:
+% Vorlage Lizenz:
 % CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %----------------------------------------------------------------------------------------
-% DOCUMENT SPECIFICATION
+% DOKUMENT SPEZIFIKATIONEN
 %----------------------------------------------------------------------------------------
 \documentclass[
-    11pt,                      % Default font size
-    %oneside,                  % One-side binding. Default: Two-side binding / alternating margins
-    english,                   % Language. Use ngerman for German (Neue Rechtschreibung)
-    singlespacing,             % Spacing option: singlespacing, onehalfspacing or doublespacing
-    %nolistspacing,            % Set spacing in lists to single
-    %draft,                    % Enable draft mode: no pictures, no links, overfull hboxes indicated
-    liststotoc,               % Include list of figures/tables/etc in the table of contents
-    %toctotoc,                 % Include the main table of contents to the table of contents
-    parskip,                  % Add vertical space between paragraphs
-    %nohyperref,               % Disable links in the entire document
-    % helveticafont,             % Uncomment to use Helvetica font
-    headsepline,               % Show a horizontal line under the header
-    %chapterinoneline,         % Place the chapter title and chapter number on one line
-    consistentlayout,          % Have the same layout for special chapters: 
-                               % declaration, abstract and acknowledgements
-]{MastersDoctoralThesis}
+    12pt,                       % Standard Schriftgrösse
+    oneside,                    % Standard: Einseitiger Einband.
+    ngerman,                    % Sprache. Verwende ngerman für deutsch (Neue Rechtschreibung). Verwende english für Englisch.
+    %singlespacing,             % Abstandsoption: singlespacing, onehalfspacing or doublespacing (einfacher Abstand, halber Abstand oder doppelter Abstand)
+    %nolistspacing,             % Abstand in Listen auf einfach setzen
+    %draft,                     % Aktivieren des Entwurf-Modus: keine Bilder, keine Links und überfüllte "H-Boxen" werden angezeigt
+    liststotoc,                 % Liste der Abbildungen/Tabellen/etc. in das Inhaltsverzeichnis einfügen
+    %toctotoc,                  % Das Hauptinhaltsverzeichnis in das Inhaltsverzeichnis aufnehmen
+    parskip,                    % Vertikalen Abstand zwischen Absätzen einfügen
+    %nohyperref,                % Links im gesamten Dokument deaktivieren
+    headsepline,                % Eine horizontale Linie unter der Überschrift anzeigen
+    %chapterinoneline,          % Kapitelüberschrift und Kapitelnummer in eine Zeile stellen
+    consistentlayout,           % Gleiches Layout für spezielle Kapitel
+                                % Erklärung, Zusammenfassung und Danksagung
+]{Diplomarbeit}
 
-% Uncomment the following lines to only include a subset of chapters.
-% This is useful for long documents, as typesetting takes a bit of time
+% Formatierungsinformationen
+
+\usepackage{titlesec}
+\usepackage[ngerman]{babel}
+\usepackage{arydshln}
+\usepackage{multicol}
+\usepackage{pdflscape}
+\titleformat*{\section}{\Huge\bfseries}
+
+
+
+% Unkommentieren Sie die folgenden Zeilen, um nur eine Teilmenge von Kapiteln einzuschließen
+% Dies ist nützlich für lange Dokumente, da der Satz etwas Zeit in Anspruch nimmt
 %\includeonly{
 %    Front/titlepage,
 %    Front/imprint,
@@ -49,7 +56,7 @@
 %    %Front/symbols,
 %    Chapters/Chapter1,
 %    %Chapters/Chapter2
-%    }
+%}
 
 
 %----------------------------------------------------------------------------------------
