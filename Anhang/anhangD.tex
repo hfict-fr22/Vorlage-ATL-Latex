@@ -1,0 +1,15 @@
+% !TEX root = ../main.tex
+
+%----------------------------------------------------------------------------------------
+% ANHANG D - Codeblockverzeichnis
+%----------------------------------------------------------------------------------------
+\renewcommand\listtablename{}                           % Namensänderung für das Codeblockverzeichnis
+\section{Codeblockverzeichnis} 
+\vspace{-2.1cm}
+\begingroup
+\let\clearpage\relax                                    % Verhindert den Seitenumbruch für das Codeblockverzeichnis
+{
+    \hypersetup{linkcolor=black}
+    \lstlistoflistings                                       % Liste der Codeblöcke hinzufügen  
+}
+\endgroup

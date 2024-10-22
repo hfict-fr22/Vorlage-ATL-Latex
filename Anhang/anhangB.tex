@@ -1,0 +1,15 @@
+% !TEX root = ../main.tex
+
+%----------------------------------------------------------------------------------------
+% ANHANG B - Abbildungsverzeichnis
+%----------------------------------------------------------------------------------------
+\renewcommand\listfigurename{}                          % Namensänderung für das Abbildungsverzeichnis
+\section{Abbildungsverzeichnis} 
+\vspace{-2.1cm}
+\begingroup
+\let\clearpage\relax                                    % Verhindert den Seitenumbruch für das Tabellenverzeichnis
+{
+    \hypersetup{linkcolor=black}
+    \listoffigures                                      % Liste der Abbildungen hinzufügen
+} 
+\endgroup
