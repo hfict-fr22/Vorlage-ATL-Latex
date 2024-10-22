@@ -8,49 +8,32 @@
 [![License: CC BY-NC-SA 3.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%203.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/3.0/)  
 <!-- badges: end -->
 
-# ZHAW thesis template
+# hf-ict ATL Vorlage
 
-This is a LaTeX template for Master theses or other reports at [Zurich University of Applied Sciences, ZHAW](https://www.zhaw.ch/).
-This repository was created to relieve future students of the tedious work of thesis formatting.  Make sure that the thesis meets the specific requirements of your study program.
+Dies ist eine Vorlage für ATL oder ähnliche Arbeiten im Rahmen des Studiengangs an der [Höhere Fachschule für Informations- und Kommunikationstechnologie, hf-ict](https://www.hf-ict.ch/).
+Dieses Repository wurde eingerichtet, um künftigen Studenten die Arbeit der Formatierung von ATLs abzunehmen.
+Vergewissere dich, dass die Arbeit die spezifischen Anforderungen des Studiengangs respektive der Arbeit entspricht.
 
+![Titelseite ATL](Figures/title-page.jpg)
 
+## Verwendung
 
-![Title page of thesis](Figures/title-page.jpg)
+Es ist praktisch, diese Vorlage in [Overleaf.com] (https://www.overleaf.com/) zu verwenden. Führe dafür die folgende Schritte aus:
 
-## Usage
+- Forke dieses Github-Repository in dein Github-Konto
+- Melde dich bei [Overleaf.com](https://www.overleaf.com/) an
+- Erstelle ein *Neues Projekt*, und wähle dann *Importieren aus Github*
+- Wähle deine Fork der ATL Vorlage
 
-It is very convenient to use this template in [Overleaf.com](https://www.overleaf.com/). This allowed me to share it with my supervisor, who could comment directly in the document. Apply the following steps:
+## Urheberschaft \& Lizenz
 
-- Fork this Github repository to your Github account.
-- Login to [Overleaf.com](https://www.overleaf.com/)
-- Create a *New Project*, and select *Import from Github* 
-- Select your fork of the thesis template
+Diese Vorlage wurde von Stefan Baumgartner auf der Vorlage von Matteo Delucchi [GitGub Vorlage ZHAW Matte Delucchi](https://github.com/matteodelucchi/ZHAW_thesis-template)
+angepasst.
 
-## Show your support
-
-Give a ⭐ if this project helped you!
-
-<a href="https://www.buymeacoffee.com/matd" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-orange.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
-
-## Contribution
-
-Feel free to contribute to this project to improve it.
-
-### How to Contribute
-
-1. Fork this repo if you didn't already.
-2. Clone in to the dev branch.
-3. Commit changes on the dev branch.
-4. Open a [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork) to merge in the [master branch of the original repository](https://github.com/matteodelucchi/ZHAW_thesis-template/tree/master)
-
-## Authorship \& Licence
-
-This template was adapted by Matteo Delucchi and others based on a template downloaded from:  
-[LaTeXTemplates.com](http://www.latextemplates.com/template/masters-doctoral-thesis)
-
-Version 2.x major modifications by:  
+Bei der Vorlage von Matteo Delucchi wurden wesentliche Anpassungen in der Version (2.x) vorgenommen durch:
 [Vel](vel@latextemplates.com)
 
-This template is based on a template by:  
+Die Vorlage von Matteo Delucchi wurde von [LaTeXTemplates.com](http://www.latextemplates.com/template/masters-doctoral-thesis) heruntergeladen
+und basiert auf den folgenden Vorlagen:  
 [Steve Gunn](http://users.ecs.soton.ac.uk/srg/softwaretools/document/templates/)  
 [Sunil Patel](http://www.sunilpatel.co.uk/thesis-template/)
