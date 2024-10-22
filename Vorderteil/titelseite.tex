@@ -1,0 +1,68 @@
+% !TEX root = ../main.tex
+
+%----------------------------------------------------------------------------------------
+% TITELSEITE
+%----------------------------------------------------------------------------------------
+
+\newgeometry{margin=1in}
+\begin{titlepage}
+
+% Die Titelseite möglichst unempfindlich machen gegeüber der Parskip Einstellungen
+\setlength{\parskip}{0pt}
+
+\begin{center}
+\includegraphics[width=0.5\textwidth]{Bilder/hf-ict-Logo}
+
+\ifxetex
+    \vspace{0.6cm}
+    {\zhawtitlefont\color{zhawblue}\LARGE \univname\par}   % University
+    \vspace{0.2cm}
+\else
+    \vspace{0.87cm}
+    {\includegraphics[height=17.9pt]{Figures/zhaw_font_eng_font}\par}
+    \vspace{0.05cm}
+\fi
+{\Large Department \deptname\par}                      % Department
+\vspace{0.2cm}
+{\Large \instname\par}                                 % Institute
+\vspace{3.5cm}                            
+\textsc{\Large \ttype}                                 % Thesis type
+\vspace{0.2cm}
+\HRule 
+\vspace{0.4cm}
+{\huge \bfseries \ttitle\par}                          % Thesis title
+\vspace{0.4cm}  
+\HRule
+\vspace{1.5cm}
+
+ 
+\begin{minipage}[t]{0.4\textwidth}
+\begin{flushleft} 
+    \large
+    \emph{Author:}\\
+    \authorname
+\end{flushleft}
+\end{minipage}
+\begin{minipage}[t]{0.4\textwidth}
+\begin{flushright} 
+    \large
+    \emph{Supervisors:} \\
+    \supnameA \\
+    \supnameB
+\end{flushright}
+\end{minipage}
+\vspace{2cm}
+ 
+\vfill
+
+{\large
+Submitted on\\
+\tdate\\
+\vspace{1.5cm}
+Study program:\\
+\studyprog\\
+}
+\vfill
+\end{center}
+\end{titlepage}
+\restoregeometry
