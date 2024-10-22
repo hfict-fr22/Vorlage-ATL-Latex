@@ -1,13 +1,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Masters/Doctoral Thesis ZHAW
+% Diplomarbeit hf-ict
 % Class File
-% Version 1.7 (24/8/20)
+% Version 0.1 (2023-02-11)
 % 
-% ZHAW class version downloaded from:
-% https://github.com/matteodelucchi/ZHAW_thesis-template
+% hf-ict Class Download:
+% https://github.com/StefanBau/HF-ICT-Template
 % 
-% University specific changes released in Version 1.7 were made by:
-% Matteo Delucchi
+% Schulische Änderungen in der Verion 0.1 wurden durchgeführt durch:
+% Stefan Baumgartner
 %
 % Original class was downloaded from:
 % http://www.LaTeXTemplates.com
@@ -32,7 +32,7 @@
 %----------------------------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}[1996/12/01]
-\newcommand{\classname}{MastersDoctoralThesis}
+\newcommand{\classname}{Diplomarbeit}
 \ProvidesClass{\classname}[2020/08/24 v1.7 LaTeXTemplates.com]
 \providecommand{\baseclass}{book}
 \RequirePackage{etoolbox}
@@ -46,7 +46,6 @@
 \booltrue{hyperrefsupport}
 \newbool{headsepline}
 \newbool{consistentlayout}
-\newbool{helveticafont}
 
 \DeclareOption{nohyperref}{\boolfalse{hyperrefsupport}}
 \DeclareOption{nolistspacing}{\booltrue{nolistspace}}
@@ -56,7 +55,6 @@
 \DeclareOption{parskip}{\booltrue{parskip}}
 \DeclareOption{headsepline}{\booltrue{headsepline}}
 \DeclareOption{consistentlayout}{\booltrue{consistentlayout}}
-\DeclareOption{helveticafont}{\booltrue{helveticafont}}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{\baseclass}}
 
 \ProcessOptions\relax
@@ -141,59 +139,61 @@
 
 \ifbool{parskip}{\RequirePackage{parskip}} % If the parskip option is passed to the class, require the parskip package 
 
+%Entfernt 2023-02-12
+%\ifbool{listtoc}{% If the liststotoc option has been passed to the class, add the lists to the table of contents
+%    \patchcmd{\listoftables}{\@starttoc{lot}}{%
+%        \addchaptertocentry{\listtablename}\@starttoc{lot}%                    
+%    }{}{}%
+%    \patchcmd{\listoffigures}{\@starttoc{lof}}{%
+%        \addchaptertocentry{\listfigurename}\@starttoc{lof}%
+%    }{}{}%
+%}
 
-\ifbool{listtoc}{% If the liststotoc option has been passed to the class, add the lists to the table of contents
-    \patchcmd{\listoftables}{\@starttoc{lot}}{%
-        \addchaptertocentry{\listtablename}\@starttoc{lot}%
-    }{}{}%
-    \patchcmd{\listoffigures}{\@starttoc{lof}}{%
-        \addchaptertocentry{\listfigurename}\@starttoc{lof}%
-    }{}{}%
-}
-
-\ifbool{toctoc}{% If the toctotoc options has been passed to the class, add the table of contents to the table of contents
-    \patchcmd{\tableofcontents}{\@starttoc{toc}%
-}{%
-    \addchaptertocentry{\contentsname}\@starttoc{toc}}{}{}%
-}
-
-\patchcmd{\tableofcontents}{\MakeUppercase}{\MakeMarkcase}{}{}
-\patchcmd{\tableofcontents}{\MakeUppercase}{\MakeMarkcase}{}{}
-\patchcmd{\listoffigures}{\MakeUppercase}{\MakeMarkcase}{}{}
-\patchcmd{\listoffigures}{\MakeUppercase}{\MakeMarkcase}{}{}
-\patchcmd{\listoftables}{\MakeUppercase}{\MakeMarkcase}{}{}
-\patchcmd{\listoftables}{\MakeUppercase}{\MakeMarkcase}{}{}
+%\ifbool{toctoc}{% If the toctotoc options has been passed to the class, add the table of contents to the table of contents
+%    \patchcmd{\tableofcontents}{\@starttoc{toc}%
+%}{%
+%    \addchaptertocentry{\contentsname}\@starttoc{toc}}{}{}%
+%}
+%
+%\patchcmd{\tableofcontents}{\MakeUppercase}{\MakeMarkcase}{}{}
+%\patchcmd{\tableofcontents}{\MakeUppercase}{\MakeMarkcase}{}{}
+%\patchcmd{\listoffigures}{\MakeUppercase}{\MakeMarkcase}{}{}
+%\patchcmd{\listoffigures}{\MakeUppercase}{\MakeMarkcase}{}{}
+%\patchcmd{\listoftables}{\MakeUppercase}{\MakeMarkcase}{}{}
+%\patchcmd{\listoftables}{\MakeUppercase}{\MakeMarkcase}{}{}
 
 % If the option `nolistspacing' is given, the spacing in the different lists is reduced to single spacing. This option is only useful, if the spacing of the document has been changed to onehalfspacing or doublespacing.
-\ifbool{nolistspace}{
-    \patchcmd{\listoffigures}{%
-        \@starttoc{lof}
-    }{%
-        \begingroup%
-        \singlespace\@starttoc{lof}\endgroup%
-    }{}{}%
-    \patchcmd{\listoftables}{%
-        \@starttoc{lot}
-    }{%
-        \begingroup%
-        \singlespace\@starttoc{lot}\endgroup%
-    }{}{}%
-    \patchcmd{\tableofcontents}{%
-        \@starttoc{toc}
-    }{%
-        \begingroup%
-        \singlespace\@starttoc{toc}\endgroup%
-    }{}{}%
-}{}
+%\ifbool{nolistspace}{
+%   %Entfernt 2023-02-12
+%   % \patchcmd{\listoffigures}{%
+%   %     \@starttoc{lof}
+%   % }{%
+%   %    \begingroup%
+%   %    \singlespace\@starttoc{lof}\endgroup%
+%   %}{}{}%
+%   %\patchcmd{\listoftables}{%                                                 %Entfernt 2023-02-12
+%   %    \@starttoc{lot}
+%   %}{%
+%   %    \begingroup%
+%   %    \singlespace\@starttoc{lot}\endgroup%
+%   %}{}
+%   {}%
+%    \patchcmd{\tableofcontents}{%
+%        \@starttoc{toc}
+%    }{%
+%        \begingroup%
+%        \singlespace\@starttoc{toc}\endgroup%
+%    }{}{}%
+%}{}
 
 
 %----------------------------------------------------------------------------------------
 %   REQUIRED PACKAGES
 %----------------------------------------------------------------------------------------
 
-\RequirePackage{babel} % Required for automatically changing names of document elements to languages besides english
+%\RequirePackage{babel} % Required for automatically changing names of document elements to languages besides english
 
-\RequirePackage{scrbase} % Required for handling language-dependent names of sections/document elements
+%\RequirePackage{scrbase} % Required for handling language-dependent names of sections/document elements
 
 % Load package scrhack, which provides fixes for various packages.
 % Defer the loading, because scrhack should be loaded after other packages.
@@ -218,7 +218,7 @@
 
 
 %----------------------------------------------------------------------------------------
-%   DEFINE CUSTOM THESIS INFORMATION COMMANDS
+%   BENUTZERDEFINIERTE BEFEHLE FÜR DIE DIPLOMARBEIT DEFINIEREN:
 %----------------------------------------------------------------------------------------
 
 \NewDocumentCommand{\thesistitle} { o m }{%
@@ -226,23 +226,27 @@
  \def\@title{#2}%
  \def\ttitle{#2}%
 }
+% Diverse Anpassungen an den Befehlen vorgenommen
 \NewDocumentCommand{\thesistype}{m}{\newcommand{\ttype}{#1}}
 \NewDocumentCommand{\thesisdate}{m}{\newcommand{\tdate}{#1}}
+\NewDocumentCommand{\thesislocation}{m}{\newcommand{\tloc}{#1}}
 \DeclareDocumentCommand{\author}{m}{\newcommand{\authorname}{#1}\renewcommand{\@author}{#1}}
+\NewDocumentCommand{\authorclass}{m}{\newcommand{\authcls}{#1}}
 \NewDocumentCommand{\supervisorA}{m}{\newcommand{\supnameA}{#1}}
 \NewDocumentCommand{\supervisorAmail}{m}{\newcommand{\supmailA}{#1}}
 \NewDocumentCommand{\supervisorAweb}{m}{\newcommand{\supwebA}{#1}}
+\NewDocumentCommand{\supervisorAUni}{m}{\newcommand{\supuniA}{#1}}                                  % hinzugefügt: 2023-02-11
 \NewDocumentCommand{\supervisorAinfo}{m}{\newcommand{\supinfoA}{#1}}
 \NewDocumentCommand{\supervisorB}{m}{\newcommand{\supnameB}{#1}}
 \NewDocumentCommand{\supervisorBmail}{m}{\newcommand{\supmailB}{#1}}
 \NewDocumentCommand{\supervisorBweb}{m}{\newcommand{\supwebB}{#1}}
+\NewDocumentCommand{\supervisorBUni}{m}{\newcommand{\supuniB}{#1}}                                  % hinzugefügt: 2023-02-11
 \NewDocumentCommand{\supervisorBinfo}{m}{\newcommand{\supinfoB}{#1}}
 \NewDocumentCommand{\examiner}{m}{\newcommand{\examname}{#1}}
 \NewDocumentCommand{\degree}{m}{\newcommand{\degreename}{#1}}
 \NewDocumentCommand{\studyprogram}{m}{\newcommand{\studyprog}{#1}}
 \NewDocumentCommand{\studyprogramlink}{m}{\newcommand{\studyproglink}{#1}}
 \NewDocumentCommand{\university}{m}{\newcommand{\univname}{#1}}
-\NewDocumentCommand{\unversityabbr}{m}{\newcommand{\univabbr}{#1}}
 \NewDocumentCommand{\universitygerman}{m}{\newcommand{\univnameger}{#1}}
 \NewDocumentCommand{\department}{m}{\newcommand{\deptname}{#1}}
 \NewDocumentCommand{\institute}{m}{\newcommand{\instname}{#1}}
@@ -275,18 +279,6 @@
 }
 
 %----------------------------------------------------------------------------------------
-%   FONT
-%----------------------------------------------------------------------------------------
-
-\ifbool{helveticafont}{
-    \RequirePackage{helvet}
-    \renewcommand\familydefault{\sfdefault} 
-    \usepackage[T1]{fontenc}
-}{
-    % nothing
-}
-
-%----------------------------------------------------------------------------------------
 %   COLOURS
 %----------------------------------------------------------------------------------------
 
@@ -313,8 +305,8 @@
 
 \doublehyphendemerits=10000 % No consecutive line hyphens
 \brokenpenalty=10000 % No broken words across columns/pages
-\widowpenalty=9999 % Almost no widows at bottom of page
-\clubpenalty=9999 % Almost no orphans at top of page
+\widowpenalty=10000 % Almost no widows at bottom of page
+\clubpenalty=10000 % Almost no orphans at top of page
 \interfootnotelinepenalty=9999 % Almost never break footnotes
 
 %----------------------------------------------------------------------------------------
@@ -322,38 +314,32 @@
 %----------------------------------------------------------------------------------------
 
 \RequirePackage[markcase=used]{scrlayer-scrpage}
-% uncomment if you want a long footer
-%------------------------------------------------
-% \providepairofpagestyles{thesisSimple}{%
-%     \clearpairofpagestyles%
-%     \automark[chapter]{chapter}
-%     \ihead{\headmark}% Inner header
-%     \ohead[\pagemark]{\pagemark}% Outer header
-%     \ifoot{\number\year, \univabbr, \instname}% Inner footer
-%     \ofoot{\shorttitle}% Outer footer
-% }
-% % \ifoot{}% Inner footer
-% % \ofoot{}% Outer footer
-%------------------------------------------------
-% comment if you want a long footer
 \providepairofpagestyles{thesisSimple}{%
     \clearpairofpagestyles%
     \automark[chapter]{chapter}
-    \ihead{\headmark}% Inner header
-    \ohead[\pagemark]{\pagemark}% Outer header
+    \ihead{hf-ict}% Inner header
+    \ohead{\ttitle}% Outer header
+    \ifoot{\tdate, \authorname}% Inner footer
+    \ofoot{\pagemark}% Outer footer
 }
-\ifoot{}% Inner footer
-\ofoot{}% Outer footer
-%------------------------------------------------
+\ifoot{\tdate, \authorname}% Inner footer
+\ofoot{\pagemark}% Outer footer
 \pagestyle{thesisSimple}
-\providepairofpagestyles[thesisSimple]{thesis}{%
+\providepairofpagestyles[thesisSimple]{Diplomarbeit}{%
     \automark*[section]{}%
+    \ihead{hf-ict}% Inner header
+    \ohead{\ttitle}% Outer header
+    \ifoot{\tdate, \authorname}% Inner footer
+    \ofoot{\pagemark}% Outer footer
 }
 \providepairofpagestyles[thesisSimple]{review}{%
-    \ofoot[\shorttitle/\authorname]{\shorttitle/\authorname}
-    \ifoot[\tdate]{\tdate}
+    \ihead{hf-ict}% Inner header
+    \ohead{\ttitle}% Outer header
+    \ifoot{\tdate, \authorname}% Inner footer
+    \ofoot{\pagemark}% Outer footer
 }
-\pagestyle{thesis}
+\pagestyle{Diplomarbeit}
+
 \ifbool{headsepline}{\KOMAoption{headsepline}{true}}{}
 \PreventPackageFromLoading[\ClassError{\classname}{Package `fancyhdr' is
 incompatible\MessageBreak with this class}{The pagesyles are defined 
@@ -362,7 +348,7 @@ KOMA-script documentation for details.}]{fancyhdr}
 
 
 \newcommand{\blank@p@gestyle}{empty}
-\newcommand{\chapter@p@gestyle}{plain}
+\newcommand{\chapter@p@gestyle}{Diplomarbeit}                       %geändert 2023-02-12, damit auch bei den Verzeichnissen die Kopf- und Fusszeilen angezeigt werden
 \NewDocumentCommand{\blankpagestyle}{ m }{%
     \ClassWarning{\classname}{\string\blankpagestyle\space is
     obsolete,\MessageBreak use \string\setblankpagestyle \space  instead}\renewcommand{\blank@p@gestyle}{}{#1}
@@ -377,211 +363,6 @@ KOMA-script documentation for details.}]{fancyhdr}
     \if@twocolumn\hbox{}\newpage\fi\fi\fi%
 }
 
-%----------------------------------------------------------------------------------------
-%   ABBREVIATIONS PAGE DESIGN
-%----------------------------------------------------------------------------------------
-
-\newcommand{\abbrevname}{List of Abbreviations}
-\providecaptionname{english,british,american}{\abbrevname}{List of Abbreviations}
-\providecaptionname{ngerman,german,austrian,naustrian}{\abbrevname}{Abk\"urzungsverzeichnis}
-\NewDocumentEnvironment{abbreviations}{ m }{%
-    \ifbool{nolistspace}{\begingroup\singlespacing}{}
-    \ifbool{listtoc}{\addchap{\abbrevname}}{\addchap*{\abbrevname}}
-    \begin{longtable}{#1}
-    }{%
-    \end{longtable}
-    \addtocounter{table}{-1}% Don't count this table as one of the document tables
-    \ifbool{nolistspace}{\endgroup}{}
-}
-
-%----------------------------------------------------------------------------------------
-%   ABSTRACT PAGE DESIGN
-%----------------------------------------------------------------------------------------
-
-\DeclareDocumentCommand{\abstractauthorfont}{}{}
-\DeclareDocumentCommand{\abstracttitlefont}{}{}
-\newcommand{\byname}{by}
-\newcommand{\vonname}{von}
-\providecaptionname{german,ngerman,austrian,naustrian}{\byname}{von}
-\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\byname}{by}
-
-\newcommand{\abstractname}{Abstract} % English abstract
-\newcommand{\extraabstractname}{Zusammenfassung} % German Zusammenfassung as extra abstract
-% Redefine the abstract name to always be in English
-\addto\captionsngerman{\renewcommand{\abstractname}{Abstract}}
-\addto\captionsgerman{\renewcommand{\abstractname}{Abstract}}
-\addto\captionsaustrian{\renewcommand{\abstractname}{Abstract}}
-\addto\captionsnaustrian{\renewcommand{\abstractname}{Abstract}}
-
-\ifbool{consistentlayout}{
-    \DeclareDocumentEnvironment{abstract}{ O{} }{%
-        \addchap*{\abstractname}%
-    }%
-    {}%end alt-abstract
-}{%
-    \DeclareDocumentEnvironment{abstract}{ O{\null\vfill} }{
-        \checktoopen
-        \tttypeout{\abstractname}
-        #1%added to be able to have abstract more than one page long
-        \thispagestyle{plain}
-        \begin{center}
-            % Make this floating box inert to the parskip setting
-            \setlength{\parskip}{0pt}
-            {\normalsize \MakeUppercase{\univname}\par}% University name in capitals
-            \bigskip
-            {\Huge\textit{\abstractname} \par}
-            \bigskip
-            {\normalsize \instname \par}% Institute name
-            {\normalsize \deptname \par}% Department name
-            \bigskip
-            {\normalsize \degreename\par}% Degree name
-            \bigskip
-            {\normalsize\bfseries \@title \par}% Thesis title
-            \medskip
-            {\normalsize \byname{} \authorname \par}% Author name
-            \bigskip
-        \end{center}
-    }
-    {
-        \vfill\null
-    }
-}
-
-\ifbool{consistentlayout}{
-    \DeclareDocumentEnvironment{extraAbstract}{ O{} }{%
-        \addchap*{\extraabstractname}%
-    }%
-    {}%end alt-abstract
-}{%
-    \DeclareDocumentEnvironment{extraAbstract}{ O{\null\vfill} }{
-        \checktoopen
-        \tttypeout{\extraabstractname}
-        #1%added to be able to have abstract more than one page long
-        \thispagestyle{empty}
-        \begin{center}
-            % Make this floating box inert to the parskip setting
-            \setlength{\parskip}{0pt}
-            {\normalsize \MakeUppercase{\univnameger} \par}% University name in capitals
-            \bigskip
-            {\Huge\textit{\extraabstractname} \par}
-            \bigskip
-            {\normalsize \instname \par}% Institute name
-            {\normalsize \deptname \par}% Department name
-            \bigskip
-            {\normalsize \degreename\par}% Degree name
-            \bigskip
-            {\normalsize\bfseries \@title \par}% Thesis title
-            \medskip
-            {\normalsize \vonname{} \authorname \par}% Author name
-            \bigskip
-        \end{center}
-    }
-    {
-        \vfill\null
-    }
-}
-%----------------------------------------------------------------------------------------
-%   ACKNOWLEDGEMENTS PAGE DESIGN
-%----------------------------------------------------------------------------------------
-
-\usepackage{xcolor}
-\colorlet{mdtRed}{red!50!black}
-\newcommand{\acknowledgementname}{Acknowledgements}
-\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish} {\acknowledgementname}{Acknowledgements} % Acknowledgement text for English countries
-\providecaptionname{german,ngerman,austrian,naustrian}{\acknowledgementname}{Danksagung} % Acknowledgement text for Germanic countries
-
-\ifbool{consistentlayout}{
-    \DeclareDocumentEnvironment{acknowledgements}{}{%
-        \tttypeout{\acknowledgementname}
-        \addchap*{\acknowledgementname}
-    }
-}
-{
-    \DeclareDocumentEnvironment{acknowledgements}{}{%
-        \checktoopen
-        \tttypeout{\acknowledgementname}
-        \thispagestyle{plain}
-        \begin{center}{\Huge\textit{\acknowledgementname}\par}\end{center}
-        \bigskip
-    }
-    {
-        \vfill\null
-    }
-}
-
-
-%----------------------------------------------------------------------------------------
-%   DECLARATION PAGE DESIGN
-%----------------------------------------------------------------------------------------
-
-\newcommand{\authorshipname}{Declaration of Authorship}
-\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\authorshipname}{Declaration of Authorship} % Declaration of Authorship text for English countries
-\providecaptionname{german,ngerman,austrian,naustrian}{\authorshipname}{Eidesstattliche Erkl\"arung} % Declaration of Authorship text for Germanic countries
-
-\ifbool{consistentlayout}{
-    \DeclareDocumentEnvironment{declaration}{}{
-        \addchap*{\authorshipname}
-        }{}%
-}{
-    \DeclareDocumentEnvironment{declaration}{}{
-        \checktoopen
-        \tttypeout{\authorshipname}
-        \thispagestyle{plain}
-        \null\vfil
-        \begin{center}{\Huge\textit{\authorshipname}\par}\end{center}
-        \bigskip
-    }{}
-}
-
-
-%----------------------------------------------------------------------------------------
-%   DEDICATION PAGE DESIGN
-%----------------------------------------------------------------------------------------
-\newcommand\dedicatory[1]{
-    \checktoopen
-    \tttypeout{Dedicatory}
-    \thispagestyle{empty}
-    \null\vfil
-    \begin{center}{\Large\slshape #1}\end{center}
-    \vfil\null
-}
-
-
-%----------------------------------------------------------------------------------------
-%   PHYSICAL CONSTANTS PAGE DESIGN
-%----------------------------------------------------------------------------------------
-
-\newcommand{\constantsname}{Physical Constants}
-\providecaptionname{english,british,american}{\constantsname}{Physical Constants}
-\providecaptionname{ngerman,german,austrian,naustrian}{\constantsname}{Physikalische Konstanten}
-
-\NewDocumentEnvironment{constants}{ m }{%
-    \ifbool{nolistspace}{\begingroup\singlespacing}{}
-    \ifbool{listtoc}{\addchap{\constantsname}}{\addchap*{\constantsname}}
-    \begin{longtable}{#1}
-    }{%
-    \end{longtable}
-    \addtocounter{table}{-1}% Don't count this table as one of the document tables
-    \ifbool{nolistspace}{\endgroup}{}
-}
-
-%----------------------------------------------------------------------------------------
-%   SYMBOLS PAGE DESIGN
-%----------------------------------------------------------------------------------------
-
-\newcommand{\symbolsname}{List of Symbols}
-\providecaptionname{english,british,american}{\symbolsname}{List of Symbols}
-\providecaptionname{ngerman,german,austrian,naustrian}{\symbolsname}{Symbolverzeichnis}
-
-\NewDocumentEnvironment{symbols}{ m }{%
-    \ifbool{nolistspace}{\begingroup\singlespacing}{}
-    \ifbool{listtoc}{\addchap{\symbolsname}}{\addchap*{\symbolsname}}
-    \begin{longtable}{#1}
-    }{%
-    \end{longtable}
-    \addtocounter{table}{-1}% Don't count this table as one of the document tables
-    \ifbool{nolistspace}{\endgroup}{}
-}
 
 %----------------------------------------------------------------------------------------
 
