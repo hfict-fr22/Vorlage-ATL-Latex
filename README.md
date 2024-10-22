@@ -14,7 +14,7 @@ Dies ist eine Vorlage für ATL oder ähnliche Arbeiten im Rahmen des Studiengang
 Dieses Repository wurde eingerichtet, um künftigen Studenten die Arbeit der Formatierung von ATLs abzunehmen.
 Vergewissere dich, dass die Arbeit die spezifischen Anforderungen des Studiengangs respektive der Arbeit entspricht.
 
-![Titelseite ATL](Figures/title-page.jpg)
+![Titelseite ATL](_Doku-Git/Titelblatt.jpg)
 
 ## Verwendung
 
