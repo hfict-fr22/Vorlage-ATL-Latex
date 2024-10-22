@@ -13,55 +13,68 @@
 \begin{center}
 \includegraphics[width=0.5\textwidth]{Bilder/hf-ict-Logo}
 
-\ifxetex
-    \vspace{0.6cm}
-    {\zhawtitlefont\color{zhawblue}\LARGE \univname\par}   % University
-    \vspace{0.2cm}
-\else
-    \vspace{0.87cm}
-    {\includegraphics[height=17.9pt]{Figures/zhaw_font_eng_font}\par}
-    \vspace{0.05cm}
-\fi
-{\Large Department \deptname\par}                      % Department
-\vspace{0.2cm}
-{\Large \instname\par}                                 % Institute
-\vspace{3.5cm}                            
-\textsc{\Large \ttype}                                 % Thesis type
-\vspace{0.2cm}
-\HRule 
-\vspace{0.4cm}
-{\huge \bfseries \ttitle\par}                          % Thesis title
-\vspace{0.4cm}  
-\HRule
+\vspace{0.5cm}
+% Schulname
+{\color{black}\LARGE \univnameger\par}
+\vspace{0.3cm}
+
 \vspace{1.5cm}
 
- 
+% Typ der Arbeit
+{\LARGE \ttype\par}
+\vspace{0.2cm}
+\HRule 
+\vspace{0.2cm}
+
+% Titel der Arbeit
+{\huge \bfseries \ttitle\par}
+\vspace{0.2cm}
+\HRule
+\vspace{1.0cm}
+
+% Autor
 \begin{minipage}[t]{0.4\textwidth}
-\begin{flushleft} 
+\begin{flushleft}
     \large
-    \emph{Author:}\\
-    \authorname
+    \emph{Autor:} \\
+    \authorname \\
+    \vspace{0.5cm}
+    \emph{Klasse:} \\
+    \authcls
 \end{flushleft}
 \end{minipage}
+
+% Fachexperte (A) und Experte (B)
 \begin{minipage}[t]{0.4\textwidth}
-\begin{flushright} 
+\begin{flushright}
     \large
-    \emph{Supervisors:} \\
+    \emph{Examinator/in:} \\
     \supnameA \\
-    \supnameB
+    \vspace{0.5cm}
+    \emph{Experte/in:} \\
+    \supnameB \\
 \end{flushright}
 \end{minipage}
-\vspace{2cm}
- 
+
 \vfill
 
 {\large
-Submitted on\\
-\tdate\\
+\emph{Ort} \\
+\tloc \\
+\vspace{0.2cm}
+\emph{Abgabedatum} \\
+\tdate \\
 \vspace{1.5cm}
-Study program:\\
-\studyprog\\
 }
+
+% Infobox (für Disclaimer oder Sperrvermerk)
+% Ausskommentieren, wenn dies benötigt wird.
+
+%\vfill
+%\begin{textbox}{red}{2}
+%
+%\end{textbox}
+
 \vfill
 \end{center}
 \end{titlepage}
