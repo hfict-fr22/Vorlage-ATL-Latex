@@ -198,40 +198,36 @@
 
 
 %----------------------------------------------------------------------------------------
-% THESIS CONTENT - CHAPTERS
+%  INHALT DER DIPLOMARBEIT - KAPITEL
 %----------------------------------------------------------------------------------------
-\mainmatter % Begin numeric (1,2,3...) page numbering
-\pagestyle{thesis} % Return the page headers back to the "thesis" style
+\mainmatter
+\renewcommand{\thesection}{\arabic{section}{}}              % Beginn der numerischen (1,2,3...) Seitennummerierung
+\setcounter{section}{0}                                     % Zurücksetzen des Counters für die Zählung
+\pagestyle{Diplomarbeit}                                    % Rückführung der Seitenköpfe auf den "Diplomarbeit"-Stil
 
+\include{Kapitel/Kapitel1}
+\include{Kapitel/Kapitel2}
+\include{Kapitel/Kapitel3}
+\include{Kapitel/Kapitel4}
+\include{Kapitel/Kapitel5}
 
-% Include the chapters of the thesis as separate files from the Chapters folder
-% Uncomment the lines as you write the chapters
-
-\include{Chapters/Chapter1}
-\include{Chapters/Chapter2} 
-%\include{Chapters/Chapter3}
-%\include{Chapters/Chapter4} 
-%\include{Chapters/Chapter5} 
-
-
-%----------------------------------------------------------------------------------------
-% THESIS CONTENT - APPENDICES
-%----------------------------------------------------------------------------------------
-\appendix % Cue to tell LaTeX that the following "chapters" are Appendices
-
-% Include the appendices of the thesis as separate files from the Appendices folder
-% Uncomment the lines as you write the Appendices
-\include{Appendices/AppendixA}
-% from https://www.zhaw.ch/en/lsfm/study/studiweb/master-ls/masters-thesis/
-%\include{Appendices/AppendixB}
-%\include{Appendices/AppendixC}
-\include{Appendices/DeclarationOfOriginalityZHAW} 
+% Fügen Sie die Kapitel der Dissertation als separate Dateien in den Ordner Kapitel ein.
+% Heben Sie die Kommentare in den Zeilen auf, während Sie die Kapitel schreiben
 
 
 %----------------------------------------------------------------------------------------
-% BIBLIOGRAPHY
+% INHALT DER DIPLOMARBEIT - ANHÄNGE
 %----------------------------------------------------------------------------------------
-\printbibliography[heading=bibintoc]
+\pagestyle{Diplomarbeit}
+%\appendix                                                  % Hinweis an LaTeX, dass es sich bei den folgenden "Kapiteln" um Anhänge handelt
+\renewcommand{\thesection}{\Alph{section}}                  % Alpha Nummerierung für Anhänge
+\setcounter{section}{0}                                     % Zurücksetzen des Counters für die Zählung
+
+
+%----------------------------------------------------------------------------------------
+% LITERATURVERZEICHNIS
+%----------------------------------------------------------------------------------------
+
 
 %----------------------------------------------------------------------------------------
 
