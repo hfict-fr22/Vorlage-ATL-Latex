@@ -5,9 +5,6 @@
 ![github-issues-image](https://img.shields.io/github/issues/hfict-fr22/Vorlage-ATL-Latex)
 ![github-issues-closed-image](https://img.shields.io/github/issues-closed-raw/hfict-fr22/Vorlage-ATL-Latex)
 
-![github-forks-image](https://img.shields.io/github/forks/hfict-fr22/Vorlage-ATL-Latex?style=social)
-![github-stars-image](https://img.shields.io/github/stars/hfict-fr22/Vorlage-ATL-Latex?style=social)
-![github-watchers-image](https://img.shields.io/github/watchers/hfict-fr22/Vorlage-ATL-Latex?style=social)
 [![License: CC BY-NC-SA 3.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%203.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/3.0/)  
 <!-- badges: end -->
 
