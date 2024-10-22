@@ -376,9 +376,9 @@ colorlinks=true,% Set to false to disable coloring links
 % citecolor=[rgb]{0.435, 0.031, 0},% The color of citations
 % linkcolor=[rgb]{0.60, 0.043, 0},% The color of references to document elements (sections, figures, etc)
 % urlcolor=[rgb]{0.733, 0.11, 0.063},% The color of hyperlinks (URLs)
-citecolor=[rgb]{0.286, 0.427, 0.537},% The color of citations
-linkcolor=[rgb]{0.161, 0.31, 0.427},% The color of references to document elements (sections, figures, etc)
-urlcolor=[rgb]{0.071, 0.212, 0.322},% The color of hyperlinks (URLs)
+citecolor=[rgb]{0, 0, 0},% The color of citations
+linkcolor=[rgb]{0, 0, 0},% The color of references to document elements (sections, figures, etc)
+urlcolor=[rgb]{0, 0, 0},% The color of hyperlinks (URLs)
 pdfstartview={FitV},
 unicode,
 breaklinks=true,

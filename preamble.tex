@@ -1,7 +1,7 @@
 % !TEX root = main.tex
 
 %----------------------------
-%   Fonts and characters
+%   SCHRIFTARTEN UND 
 %----------------------------
 
 % Support for special characters
@@ -10,22 +10,10 @@
 
 % Set main fonts
 % Fonts catalogue: https://tug.org/FontCatalogue/
-\usepackage{mathpazo}          % Use the Palatino font by default
-\usepackage{beramono}          % Override the monospace/typewriter font
+% Wichtig: für Arial ist LuaLaTex notwendig!
 
-% ZHAW title font
-% Try to load Helvetica Rounded Bold, and OpenType font.
-% Loading OTF or system fonts is possible with XeLaTeX.
-% If the document is compiled using pdfLaTeX, resort 
-\usepackage{ifxetex}
-\ifxetex
-    \usepackage{fontspec}
-    \newfontfamily\zhawtitlefont{Helvetica Rounded Bold}
-\else
-    \newcommand{\zhawtitlefont}{\scshape}
-\fi
-
-%\usepackage[scaled]{helvet}
+\usepackage{fontspec}
+\setmainfont{Arial}
 
 %----------------------------
 %   Environments
@@ -114,8 +102,9 @@
 \usepackage[
     backend=biber,             % Use biber backend (an external tool)
     sorting=none,              % Enumerates the reference in order of their appearance
-    style=numeric-comp         % Choose here your preferred citation style
+    style=apa                  % Choose here your preferred citation style
 ]{biblatex}
+\DeclareLanguageMapping{ngerman}{ngerman-apa} % Sprache in Deutsch
 \addbibresource{quellen.bib}   % The filename of the bibliography
 \usepackage[autostyle=true]{csquotes} 
                                % Required to generate language-dependent quotes 
