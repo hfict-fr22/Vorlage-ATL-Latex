@@ -5,8 +5,8 @@
 %----------------------------
 
 % Support for special characters
-\usepackage[utf8]{inputenc}    % Specify input encoding
-\usepackage[T1]{fontenc}       % Specify font encoding
+%\usepackage[utf8]{inputenc}    % Specify input encoding
+%\usepackage[T1]{fontenc}       % Specify font encoding
 
 % Set main fonts
 % Fonts catalogue: https://tug.org/FontCatalogue/
@@ -14,6 +14,9 @@
 
 \usepackage{fontspec}
 \setmainfont{Arial}
+
+%Font für Listing
+\newfontfamily{\lstsansserif}[Scale=1.0]{Arial}
 
 %----------------------------
 %   Environments
@@ -67,7 +70,7 @@
     keywordstyle=\color{magenta},
     numberstyle=\tiny\color{codegray},
     stringstyle=\color{codepurple},
-    basicstyle=\ttfamily\footnotesize,
+    basicstyle=\lstsansserif,
     breakatwhitespace=false,
     breaklines=true,
     captionpos=b,
@@ -102,14 +105,42 @@
 % Set up references
 \usepackage[
     backend=biber,             % Use biber backend (an external tool)
-    sorting=none,              % Enumerates the reference in order of their appearance
+    sorting=nyt,              % Sortierung nach Name, Jahr, Titel
     style=apa                  % Choose here your preferred citation style
 ]{biblatex}
 \DeclareLanguageMapping{ngerman}{ngerman-apa} % Sprache in Deutsch
 \addbibresource{quellen.bib}   % The filename of the bibliography
+
 \usepackage[autostyle=true]{csquotes} 
                                % Required to generate language-dependent quotes 
                                % in the bibliography
+\DefineBibliographyStrings{ngerman}{%
+  retrieved = {Abgerufen},
+  from = {von}}
+
+\DeclareFieldFormat{url}{\url{#1}}
+\DeclareFieldFormat{abstracturl}{\url{#1}}
+\DeclareFieldFormat{urldate}{#1}
+
+\renewbibmacro*{url+urldate}{%
+  \ifthenelse{\(\iffieldundef{url}\AND\iffieldundef{abstracturl}\AND\iffieldundef{abstractloc}\)\OR\NOT\iffieldundef{doi}}
+  {}
+  {\ifthenelse{\iffieldundef{abstracturl}\AND\iffieldundef{abstractloc}}
+    {}
+    {\printtext{\bibcpstring{abstract}}\addspace}%
+    \printtext{\bibstring{retrieved}}%
+    \setunit{\addspace}%
+    \iffieldundef{urlyear}
+    {}
+    {\printurldate%
+      \setunit*{\addcomma\space}}% hier Komma einfügen
+    \printtext{\bibstring{from}}%
+    \setunit*{\addspace}%
+    \printfield{urldescription}%
+    \setunit*{\addcolon\addspace}%
+    \iffieldundef{url}{}{\printfield{url}\renewcommand*{\finentrypunct}{\relax}}%
+    \iffieldundef{abstractloc}{}{\printfield{abstractloc}\renewcommand*{\finentrypunct}{\relax}}
+    \iffieldundef{abstracturl}{}{\printfield{abstracturl}\renewcommand*{\finentrypunct}{\relax}}}}
 
 %----------------------------------------------------------------------------------------
 %   MARGIN SETTINGS
@@ -117,11 +148,11 @@
 
 \geometry{
     paper=a4paper,      % Change to letterpaper for US letter
-    inner=2.5cm,        % Inner margin
-    outer=3.8cm,        % Outer margin
-    top=1.5cm,          % Top margin
-    bottom=1.5cm,       % Bottom margin
-    bindingoffset=.5cm, % Binding offset
+    inner=3.0cm,        % Inner margin
+    outer=1.5cm,        % Outer margin
+    top=3.0cm,          % Top margin
+    bottom=2.5cm,       % Bottom margin
+    bindingoffset=0cm, % Binding offset
     %showframe,         % Show the type block of the page
 }
 \setlength{\parskip}{1em}
